@@ -1,0 +1,46 @@
+.pwd-container {
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    /* min-height: 250px; */
+}
+
+.pwd-container h3 {
+    margin-top: 0;
+}
+
+.toggler {
+    cursor: pointer;
+}
+
+.password-strength-meter {
+    margin: 20px 0;
+    width: 90%;
+    display: none;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    margin-right: 5px;
+}
+
+input.error,
+input.error:focus {
+    border: 1px solid #d9534f;
+}
+
+.password-holder {
+    margin-right: 10px;
+}
+
+.password-errors-holder {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.password-errors-holder ul {
+    list-style: none;
+    padding: 0;
+}
