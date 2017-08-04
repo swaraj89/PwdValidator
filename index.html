@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>password complexity checker</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+    <div class="container">
+        <h1 class="text-center">Password Complexity Checker</h1>
+        <div class="row pwd-container">
+            <h3 class="text-center">PASSWORD UNIT 1</h3>
+            <div class="col-md-6 col-lg-6 col-md-offset-3">
+                <div class="password-holder">
+                    <input type="password" id="password" placeholder="Enter Password here" autofocus>
+                    <span class="glyphicon glyphicon-eye-open toggler" aria-hidden="true" title="Show password" id="toggle-password"></span>
+                </div>
+                <div class="password-strength-meter progress" id="pwd-meter">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                        <span class="sr-only"></span>
+                    </div>
+                </div>
+                <div class="password-errors-holder">
+                    <ul id="pwd-error-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row pwd-container">
+            <h3 class="text-center">PASSWORD UNIT 2</h3>
+            <div class="col-md-6 col-lg-6 col-md-offset-3">
+                <div class="password-holder">
+                    <input type="password" id="password1" placeholder="Enter Password here" autofocus>
+                    <span class="glyphicon glyphicon-eye-open toggler" aria-hidden="true" title="Show password" id="toggle-password1"></span>
+                </div>
+                <div class="password-strength-meter progress" id="pwd1-meter">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                        <span class="sr-only"></span>
+                    </div>
+                </div>
+                <div class="password-errors-holder">
+                    <ul id="pwd-error-list1">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/pwd-checker.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $('#password').passwordCheck({
+                pwdErrorHolder: "#pwd-error-list",
+                pwdToggler: "#toggle-password",
+                pwdMeter: "#pwd-meter"
+            });
+
+            $('#password1').passwordCheck({
+                pwdErrorHolder: "#pwd-error-list1",
+                pwdToggler: "#toggle-password1",
+                pwdMeter: "#pwd1-meter"
+            });
+        });
+    </script>
+</body>
+
+</html>
